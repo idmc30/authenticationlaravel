@@ -1,7 +1,6 @@
 @extends('layouts.app')
-
+@section('head', 'Login')
 @section('content')
-
 	<div class="row">
 
 		<div class="container">
@@ -23,7 +22,7 @@
 							<label for="password">Contraseña</label>
 							<input type="password" class="form-control" name="password" placeholder="Ingresa tu password">
 						</div>
-						<input class="btn btn-primary" type="button" name="btnlogin" value="Ingresar">
+						<input class="btn btn-primary btn-block" type="button" name="btnlogin" value="Ingresar">
 					</form>
 				  </div>
 				</div>
