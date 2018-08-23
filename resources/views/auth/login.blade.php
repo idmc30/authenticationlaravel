@@ -17,11 +17,13 @@
 						<div class="form-group">
 							<label for="email">Email</label>
 							<input type="email" class="form-control" name="email" placeholder="Ingresa tu email">
+							{!! $errors->first('email', '<span class="help-block">:message</span>') !!}
 						</div>
 
 						<div class="form-group">
 							<label for="password">Contraseña</label>
 							<input type="password" class="form-control" name="password" placeholder="Ingresa tu password">
+							{!! $errors->first('password', '<span class="help-block">:message</span>') !!}
 						</div>
 						
 						<button class="btn btn-primary btn-block" name="btnlogin">Ingresar</button>
