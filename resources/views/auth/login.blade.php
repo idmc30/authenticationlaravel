@@ -14,13 +14,13 @@
 				  <div class="card-body">
 				   <form  method="POST" action="{{ route('login') }}" >
 				   	{{ csrf_field() }}
-						<div class="form-group " >
+						<div class="form-group" >
 							<label for="email"><b>Email</b> </label>
 							<input type="email" class="form-control" name="email" placeholder="Ingresa tu email">
 							{!! $errors->first('email', '<span class="badge badge-pill badge-danger">:message</span>') !!}
 						</div>
 
-						<div class="form-group {{ $errors->has('email') ? 'with-errors': ''  }}"  >
+						<div class="form-group"  >
 							<label for="password"><b>Contraseña</b></label>
 							<input type="password" class="form-control" name="password" placeholder="Ingresa tu password">
 							{!! $errors->first('password', '<span class="badge badge-pill badge-danger">:message</span>') !!}
