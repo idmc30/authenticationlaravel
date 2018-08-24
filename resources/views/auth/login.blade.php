@@ -16,7 +16,12 @@
 				   	{{ csrf_field() }}
 						<div class="form-group" >
 							<label for="email"><b>Email</b> </label>
-							<input type="email" class="form-control" name="email" placeholder="Ingresa tu email">
+							<input type="email" 
+							       class="form-control" 
+							       name="email"
+							       value="{{ old('email') }}"
+							       placeholder="Ingresa tu email">
+
 							{!! $errors->first('email', '<span class="badge badge-pill badge-danger">:message</span>') !!}
 						</div>
 

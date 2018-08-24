@@ -21,7 +21,9 @@ class LoginController extends Controller
         return 'Tu sesion ha inciado correctamente';
     }
      //retornando hacia atras con los errores
-    return back()->withErrors(['email'=>'Estas credenciales no coincides con nuestros registros']);
+    return back()
+           ->withErrors(['email'=>'Estas credenciales no coincides con nuestros registros'])
+           ->withInput(request(['email']));
 
    }
 
