@@ -7,6 +7,17 @@
 
 </head>
 <body>
+	
+    @if (session()->has('flash'))
+    <div class="panel panel-default">
+	  <div class="panel-body"><div class="alert alert-danger">
+	   	 {{ session('flash') }}
+	   </div></div>
+	</div>
+	   
+	@endif	
+	
+	
 	@yield('content')
 	
 </body>

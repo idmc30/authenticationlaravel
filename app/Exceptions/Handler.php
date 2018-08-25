@@ -48,7 +48,7 @@ class Handler extends ExceptionHandler
     {
         if($exception instanceof \Illuminate\Auth\AuthenticationException)
         {
-            return redirect('/')->with('flahs', 'Por favor inicia sesión');
+            return redirect('/')->with('flash', 'Por favor inicia sesión');
         }
 
         return parent::render($request, $exception);
