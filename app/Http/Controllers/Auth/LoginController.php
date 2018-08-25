@@ -7,11 +7,19 @@ use Auth;
 
 class LoginController extends Controller
 {
-
+      // el middleware tambien se puede hacer de esta forma y no en la ruta misma
       // public function __construct()
       // {
       //   $this->middleware('guest',['only'=>'showLoginForm'])
       // } 
+
+     
+     public function logout(){
+        
+        Auth::logout();
+        return redirect('/');
+
+     }
 
 
 
