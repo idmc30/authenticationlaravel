@@ -18,7 +18,8 @@ class LoginController extends Controller
      //return $credentials;
     //Auth::attempt() devuelve valor boolean true o false 
    if(Auth::attempt($credentials)){
-        return 'Tu sesion ha inciado correctamente';
+        
+        return redirect()->route('dashboard');
     }
      //retornando hacia atras con los errores
     return back()
