@@ -34,7 +34,7 @@ class LoginController extends Controller
    public function login(){
       
     $credentials=  $this->validate(request(),[
-        'email' =>'email|required|string',
+        $this->username() =>'required|string',
         'password' => 'required|min:6!string'
       ]);
 
@@ -46,9 +46,16 @@ class LoginController extends Controller
     }
      //retornando hacia atras con los errores
     return back()
-           ->withErrors(['email'=>'Estas credenciales no coincides con nuestros registros'])
-           ->withInput(request(['email']));
+           ->withErrors([ $this->username()=>'Estas credenciales no coincides con nuestros registros'])
+           ->withInput(request([ $this->username()]));
 
    }
+
+   //creado un nuevo metodo que me devuel el username
+   public function username(){
+
+    return 'name';
+  }
+   
 
 }

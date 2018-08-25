@@ -15,14 +15,14 @@
 				   <form  method="POST" action="{{ route('login') }}" >
 				   	{{ csrf_field() }}
 						<div class="form-group" >
-							<label for="email"><b>Email</b> </label>
-							<input type="email" 
+							<label for="username"><b>Username</b> </label>
+							<input type="text" 
 							       class="form-control" 
-							       name="email"
+							       name="name"
 							       value="{{ old('email') }}"
-							       placeholder="Ingresa tu email">
+							       placeholder="Ingresa tu username">
 
-							{!! $errors->first('email', '<span class="badge badge-pill badge-danger">:message</span>') !!}
+							{!! $errors->first('name', '<span class="badge badge-pill badge-danger">:message</span>') !!}
 						</div>
 
 						<div class="form-group"  >
