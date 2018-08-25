@@ -10,10 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('auth.login');
-});
+//guest o invitado
+Route::get('/', 'Auth\LoginController@showLoginForm')->middleware('guest');
 
 Route::get('dashboard','DashboardController@index')->name('dashboard');
 
